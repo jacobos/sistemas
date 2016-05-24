@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>08_nesting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style>
+        .row > *[class^='col'] {
+            box-shadow: inset 0 0 1px 1px #000;
+            background: #93b9ba;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- este contenedor ocupa como mínimo 767px de la pantalla, después es fluido (100%)-->
+    <div class="container" style="padding-top: 50px">
+        <!-- declaramos una seccion que contiene columnas de elementos, no tiene porque ocupar solamente una fila -->
+        <div class="row">
+            <!-- elementos que ocupan 6 columnas en lg (>= 1200px) y 3 columnas en el resto -->
+            <div class="col-lg-6 col-sm-3" style="background-color: #9fa">Nivel 1: .col-lg-6 .col-sm-3
+               <!-- esta nueva row ocupa el 100% del elemento en el que nos encontramos,
+               el que tiene el style="background-color: #9fa" -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        Nivel 2: Yo estoy anidado!!
+                        <br>(un row con un col-lg-4, dentro del elemento verde)
+                    </div>
+                    <div class="col-lg-4">
+                        Nivel 2: Yo estoy anidado!!
+                        <br>(un row con un col-lg-4, dentro del elemento verde)
+                    </div>
+                    <div class="col-lg-4">
+                        Yo estoy anidado!!
+                        <br> (un row con un col-lg-4, dentro del elemento verde)
+                    </div>
+                </div>
+            </div>
+            <!-- Limpiamos el flotamiento, con el clearfix las columnas vuelven a empezar en la izquierda.
+            La clase 'clearfix' sólo se aplica cuando el dispositivo sea
+            de tipo lg, lo indica la clase 'visible-lg-block'
+            mas info http://getbootstrap.com/css/#responsive-utilities-classes -->
+            <div class="clearfix visible-lg-block"></div>
+            <div class="col-lg-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+            <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+            <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        </div>
+    </div>
+    <script src="js/view_source.min.js"></script>
+</body>
+
+</html>

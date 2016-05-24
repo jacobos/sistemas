@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>22 - images and video responsive embed</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+         <div class="row">
+            <h3 class="page-header">Clases en las &lt;img>
+            </h3>
+        </div>
+
+        <div class="row bg-success">
+            <div class="col-xs-6 text-center">
+               <div style="position:relative">
+                <img title="normal image, no class" src="http://www.ansharphoto.com/Portfolio/Landscapes/i-RxMGG56/0/S/Stone-Jetty-in-Small-Village-near-Omis-at-Dawn-Dalmatia-Croatia-3-S.jpg">
+                <span style="position: absolute; left: 40%; top: 50%; background: white">imagen normal, sin class</span>
+                </div>
+            </div>
+            <div class="col-xs-6 text-center">
+               <div style="position:relative">
+                <img title='class="img-rounded"' class="img-rounded" src="http://www.ansharphoto.com/Portfolio/Landscapes/i-RxMGG56/0/S/Stone-Jetty-in-Small-Village-near-Omis-at-Dawn-Dalmatia-Croatia-3-S.jpg">
+                <span style="position: absolute; left: 40%; top: 50%; background: white">class="img-rounded"</span>
+                </div>
+            </div>
+            <div class="col-xs-6 text-center">
+               <div style="position:relative">
+                <img title='class="img-circle"'class="img-circle" src="http://www.ansharphoto.com/Portfolio/Landscapes/i-RxMGG56/0/S/Stone-Jetty-in-Small-Village-near-Omis-at-Dawn-Dalmatia-Croatia-3-S.jpg" >
+                <span style="position: absolute; left: 40%; top: 50%; background: white">class="img-circle"</span>
+                </div>
+            </div>
+            <div class="col-xs-6 text-center">
+                <div style="position:relative">
+                <img title='class="img-thumbnail"'class="img-thumbnail" src="http://www.ansharphoto.com/Portfolio/Landscapes/i-RxMGG56/0/S/Stone-Jetty-in-Small-Village-near-Omis-at-Dawn-Dalmatia-Croatia-3-S.jpg">
+                <span style="position: absolute; left: 40%; top: 50%; background: white">class="img-thumbnail"</span>
+                </div>
+            </div>
+                        <div class="col-xs-6 text-center">
+               <div style="position:relative">
+                <img title='class="img-circle img-thumbnail"'class="img-circle img-thumbnail" src="http://www.ansharphoto.com/Portfolio/Landscapes/i-RxMGG56/0/S/Stone-Jetty-in-Small-Village-near-Omis-at-Dawn-Dalmatia-Croatia-3-S.jpg" >
+                <span style="position: absolute; left: 40%; top: 50%; background: white">class="img-circle img-thumbnail"</span>
+                </div>
+            </div>
+            <div class="col-xs-6 text-center">
+                <div style="position:relative">
+                <img title='class="img-rounded img-thumbnail"'class="img-rounded img-thumbnail" src="http://www.ansharphoto.com/Portfolio/Landscapes/i-RxMGG56/0/S/Stone-Jetty-in-Small-Village-near-Omis-at-Dawn-Dalmatia-Croatia-3-S.jpg">
+                <span style="position: absolute; left: 40%; top: 50%; background: white">class="img-rounded img-thumbnail"</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h3 class="page-header">Clase <i>thumbnail</i> en un &lt;a> con elementos dentro
+            </h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="thumbnail" href="http://www.travellikealocal.org/en/wp-content/uploads/sites/4/2013/06/London-Bus-150x150.jpg">
+                    <p>Big Ben: London</p>
+                    <img src="http://toptravellists.com/wp-content/uploads/2015/02/London-150x150.jpg" alt="Big Ben">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="thumbnail" href="http://www.kevinandamanda.com/whatsnew/wp-content/uploads/2014/05/London-Day-2-Crown-Jewels-Big-Ben-08-150x150.jpg">
+                    <p>Phone: London</p>
+                    <img src="http://www.kevinandamanda.com/whatsnew/wp-content/uploads/2014/05/London-Day-2-Crown-Jewels-Big-Ben-08-150x150.jpg" alt="Phone">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="thumbnail" href="http://www.atlasandboots.com/wp-content/uploads/2014/08/london-150x150.jpg">
+                    <p>London eye: London</p>
+                    <img src="http://www.atlasandboots.com/wp-content/uploads/2014/08/london-150x150.jpg" alt="Eye" style="width:150px;height:150px">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="page-header">Un div con <i>class="embed-responsive embed-responsive-16by9"</i> <br>con un &lt;iframe> dentro con <br><i>class="embed-responsive-item"</i>
+            <br>&rarr; &lt;div class...>&lt;iframe class...>content&lt;/div>&lt;/iframe>
+            </h3>
+        </div>
+
+        <div class="row" style="padding-bottom: 60px">
+            <div class="col-xs-12 col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YXVoqJEwqoQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/N5ulK2e8P48" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6O0XDelA2DE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/view_source.min.js"></script>
+</body>
+
+</html>

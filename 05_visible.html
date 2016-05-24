@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>05_visible</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style>
+        .row > *[class^='col'] {
+            box-shadow: inset 0 0 1px 1px #000;
+            background: #93b9ba;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- este contenedor ocupa como mínimo 767px de la pantalla, después es fluido (100%)-->
+    <div class="container" style="padding: 40px;">
+        <!-- declaramos una seccion que contiene columnas de elementos, no tiene porque ocupar solamente una fila -->
+        <div class="row">
+            <!-- ocuparía 6 columnas en dispotivos < 768px, 3 columnas en superiores a 768 -->
+            <div class="col-xs-6 col-sm-3">
+                <!-- se ocultaría en dispositivos xs, < 768px, en el resto se vería -->
+                <span class="hidden-xs">Extra small</span>
+                <!-- se mostraría en dispositivos xs, < 768px, en el resto se ocultaria,
+                esto nos lo ofrece el visible-xs-block',
+                mas info http://getbootstrap.com/css/#responsive-utilities-classes -->
+                <span class="visible-xs-block">&#10003; Visible on x-small</span>
+            </div>
+            <!-- más de lo mismo -->
+            <div class="col-xs-6 col-sm-3">
+                <span class="hidden-sm">Small</span>
+                <span class="visible-sm">&#10003; Visible on small</span>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <span class="hidden-md">Medium</span>
+                <span class="visible-md">&#10003; Visible on medium</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 ">
+                <span class="hidden-lg">Large</span>
+                <span class="visible-lg">&#10003; Visible on large *</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <a href="http://getbootstrap.com/css/#responsive-utilities-classes" target="_blank" class="btn btn-default">more info...</a>
+    </div>
+    <script src="js/view_source.min.js"></script>
+</body>
+
+</html>
