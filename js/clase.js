@@ -213,25 +213,10 @@
       name: "ejercicio",
       url: "27_ejercicio.gif",
       orden: -100
+    }*//*,{
+      name: "ejercicio",
+      url: "27_ejercicio.gif",
+      orden: -100
     }*/
   ];
 })();
-
-
-/*
-
-b = a.map(function (el) {
-  console.log({
-    name: el.name.trim(),
-    desc: el.desc,
-    url: el.url.trim()
-  });
-});
-b = a.map(function (el) {
-  var ob = {};
-  ob.name = el.name.trim();
-  ob.desc = el.desc.trim();
-  ob.url = el.url.trim();
-  return ob;
-});
-*/
