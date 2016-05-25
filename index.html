@@ -82,7 +82,14 @@
 <body style="padding-top:20px">
   <div class="header"></div>
   <div class="container jumbotron" ng-controller="siClassController as elementInClass" ng-cloak>
+<<<<<<< HEAD
     <div class="col-md-4 col-xs-12" ng-repeat="element in elements | orderBy: 'orden'">
+=======
+      <!--
+      <div class="col-md-4 col-xs-12" ng-repeat="element in elements | orderBy: 'orden' | limitTo:20 ">
+      -->
+      <div class="col-md-4 col-xs-12" ng-repeat="element in elements">
+>>>>>>> 94c7e9aa8ccc9b22c658ec82fd21399ff7c50183
         <div class="panel panel-info">
           <div class="panel-heading parent">
 
@@ -121,6 +128,7 @@
     });
   </script>
 
+<<<<<<< HEAD
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -135,3 +143,8 @@
 
 </html>
 
+=======
+</body>
+
+</html>
+>>>>>>> 94c7e9aa8ccc9b22c658ec82fd21399ff7c50183
