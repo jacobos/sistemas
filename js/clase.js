@@ -189,8 +189,6 @@
       name: "ejercicio 1",
       url: "ejercicio_bootstrap.gif",
       orden: -100
-<<<<<<< HEAD
-=======
     },{
       name: "ejercicio 2",
       url: "32_ejercicio.png",
@@ -211,8 +209,6 @@
       name: "my git",
       url: "https://github.com/jacobos/bootstrap-examples",
       orden: -100
-
->>>>>>> 94c7e9aa8ccc9b22c658ec82fd21399ff7c50183
     }/*,{
       name: "ejercicio",
       url: "27_ejercicio.gif",
