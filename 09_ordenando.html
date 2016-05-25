@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>09_ordenando</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- este contenedor ocupa como mínimo 767px de la pantalla, después es fluido (100%)-->
+    <div class="container-fluid" style="padding-top: 50px">
+        <!-- hay que pensar en que elementos se van a modificar, en que momento se quieren reordenar.
+        Si cambian de lugar en dispositivos más grandes y en el resto no, tiene sentido cambiar el orden -->
+
+        <!-- declaramos una sección que contiene columnas de elementos, no tiene porque ocupar solamente una fila -->
+        <div class="row">
+            <!-- con col-lg-push-4 decimos que este elemento se verá en el lugar del siguiente elemento en lg
+            y que ocupa 4 columnas, si quitamos col-lg-push-4 la B no se verá, estaría situada detras de la A -->
+            <div class="col-sm-4 col-lg-push-4">
+                <div class="alert alert-danger">B</div>
+            </div>
+            <!-- con col-lg-push-4 decimos que este elemento se verá en el lugar del elemento anterior en lg
+            y que ocupa 4 columnas (si quitamos el col-lg-pull-4 la B no se verá, estaría situada detras de la A -->
+            <div class="col-sm-4 col-lg-pull-4">
+                <div class="alert alert-info">A</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="alert alert-info">C</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/view_source.min.js"></script>
+</body>
+
+</html>

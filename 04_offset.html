@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>04_offset</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style>
+        .row > *[class^='col'] {
+            box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+            background: #93b9ba;
+        }
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          /* Set the fixed height of the footer here */
+          height: 60px;
+          background-color: #f5f5f5;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- este contenedor ocupa como mínimo 767px de la pantalla, después es fluido (100%)-->
+    <div class="container">
+        <h1> Offset </h1>
+        <!-- declaramos una seccion que contiene columnas de elementos, no tiene porque ocupar solamente una fila -->
+        <div class="row">
+            <!-- un elemento que ocupara 6 columnas en dispositivos de tipo xs (< 768px) 
+            (si no ponemos otro col-** ocuparia lo mismo en todos los dispositivos, 6 columnas, que es nuestro caso).
+            Con el col-md-offset-3 decimos que en los dispositivos >= 992px se desplace 3 columnas hacia la derecha -->
+            <div class="col-xs-6 col-md-offset-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>co
+            </div>
+        </div>
+    </div>
+    <!-- un elemento de tipo footer con la clase footer, ocupa el 100% (not sticky, yet) -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </footer>
+    <script src="js/view_source.min.js"></script>
+</body>
+
+</html>

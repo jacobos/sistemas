@@ -1,0 +1,12 @@
+/*
+ * Row with equal height columns, not working in IE9 and below because of flex
+ * add the class to the target row 
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+

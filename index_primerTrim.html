@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercises</title>
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <link rel="stylesheet" href="styles/styleEx.css">
+  <style>
+    a,
+    .showHide {
+      color: #088;
+    }
+
+    .showHide {
+      display: inline-block;
+    }
+
+    a:hover,
+    .showHide:hover {
+      color: blue;
+    }
+    body{
+      padding-bottom: 120px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Ejercicios consola</h1>
+  <ol type="a">
+    <li>
+      A partir del fichero con un listado de <a href="1000GreatestFilms.ods" target="_blank">las mejores películas de la historia</a> haz las siguientes operaciones utilizando la shell
+      <ol>
+        <li>
+          Seleccionar todas las películas 1950 a 1960 (ambos inclusive)
+          <br>(ej. grep '1950\|1951' pelis.txt)
+        </li>
+        <li>
+          Seleccionar todas las películas a partir de 1983 (inclusive)
+        </li>
+        <li>
+          Buscar regreso al futuro (en el comando grep con [Tt] buscaría texto con t ó T)
+        </li>
+        <li>
+          Busca todas las pelis que no sean de los años 80 (1980-1989)
+        </li>
+        <li>
+          Cuenta el número de películas de cada una de las décadas (+ de 1 comando)
+        </li>
+        <li>
+          Selecciona el nombre de las pelis y guárdalas en un nuevo fichero
+        </li>
+        <li>
+          De este último fichero elige las que tengan la palabra 'the', que sea -case insensitive- (con la opción -i)
+        </li>
+        <li>
+          Almacena en otro fichero el nombre de las pelis y el año
+        </li>
+        <li>
+          Ordena las pelis por nombre
+        </li>
+        <li>
+          Cuenta el número de veces que las pelis son de 'Science Fiction', cuántas de 'Fantasy' y cuántas de 'Romance' (+ de 1 comando)
+        </li>
+        <li>
+          Todas las operaciones mételas (redirigidas) en un fichero "filtro_pelis.txt"
+        </li>
+      </ol>
+    </li>
+    <li>
+      haciendo scripts de bash (.sh), y guardándolo todo en una carpeta, cada uno de los ejercicios un fichero. Código base:
+      <code>
+        <pre>
+          #!/bin/bash
+           for i in ``
+           do
+            mkdir $i
+           done
+        </pre>
+      </code>
+      <ol>
+        <li>
+          Pon el nombre de 6 personas y crea una carpeta por cada persona
+        </li>
+        <li>
+          Lo mismo pero teniendo los nombres en un fichero de texto, cada nombre en una linea
+        </li>
+        <li>
+          Lo mismo pero teniendo los nombres en un fichero de texto separados por _
+        </li>
+        <li>
+          Utilizando uno de los tres anteriores crea en cada carpeta un fichero que tenga como nombre el de la persona y que contenga el nombre de la persona (ej. en la carpeta pepe el fichero pepe.txt con el texto pepe)
+        </li>
+        <li>
+          Haz la suma de tres parámetros pasados por la terminal &rarr; ./miSh.sh 1 2 3 &rarr; resultado 6<br>
+          Si quieres asignar a una variable un valor pepe=$(( $1 + $2 )), no tienen que haber espacios antes y después del igual<br>
+        </li>
+        <li>
+          Sabiendo que un bucle for 'clásico' tiene la siguiente forma &rarr; for (( c = 0; c
+          < 10; c++ )) ... <br>
+            Haz la multiplicación del 1 al 12 del primer parámetro pasado por la terminal.
+        </li>
+        <li>
+          Lo mismo que el ejercicio anterior pero metiendo la información en una tabla, redirige la salida a un archivo .html
+        </li>
+        <li>
+          Estructuras de control... http://www.linux-es.org/node/238
+        </li>
+        <li>
+          Variables internas (1): http://www.segurablanc.com.ar/linux/programacion-bash-linux/variables-internas-de-bash
+        </li>
+        <li>
+          Variables internas (2): http://www.segurablanc.com.ar/linux/programacion-bash-linux/variables-internas-de-bash/variables-internas-pagina-2
+        </li>
+        <li>
+          Pásale la edad de una persona a un script y te tiene que decir
+          <br>
+          # < 10 años: no puedes pasar
+          <br># >= 10 y < 30 : piensatelo
+          <br># >= 30 : passaaaa
+          <br># just ifs
+        </li>
+        <li>
+          Lo mismo que el anterior utilizando else's
+        </li>
+	<li>
+	  Haz un script que te diga si en el directorio actual hay más de x ficheros (pásalo por parámetro)
+<code>
+<pre>
+	#!/bin/bash
+
+	if [ $# -eq 0 ] # esto es el número de parámetros
+	then
+	  echo "deberías de introducir mínimo un parámetro"
+	  exit
+	fi
+	#$1 # el número ficheros#
+	listar=`ls | wc -l`
+	if [ $listar -gt $1 ]
+	then
+	  echo "El directorio tiene mas de $1 ficheros"
+	fi
+</pre>
+</code>
+	</li>
+	<li>
+	  Lo mismo pero pasándole tu el directorio sobre el que quieres saber cuántos ficheros hay
+	</li>
+	<li>
+	  Lo mismo pero pasándole tres directorios. Crea en cada uno de dichos directorios un fichero que se llame visitado
+	</li>
+	<li>
+	  Pásale a un script una carpeta y el nombre de 1, 2, 3 ó 4 tipos de fichero.<br>
+	  Ejemplo:<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  ./miSh.sh nombre_carpeta txt sh php js<br>
+	  &nbsp;&nbsp; Resultado:<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;en la carpeta nombre_carpeta hay 15 ficheros de tipo txt<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;en la carpeta nombre_carpeta hay 25 ficheros de tipo sh<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;en la carpeta nombre_carpeta hay 5 ficheros de tipo php<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;en la carpeta nombre_carpeta hay 3 ficheros de tipo js<br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;en total hay 48 ficheros de estos tipos
+
+	</li>
+  <li>
+    Pedir el nombre de x carpetas, crearlas y en cada una de ellas crear un .htaccess<br>
+    para crear el .htaccess tenéis que acceder a la carpeta (cd etc.)<br>
+    Utiliza el comando read.<br>
+    Uso: ./script.sh 7 &rarr; tendrá que pedir 7 nombres de carpeta, crearlas, etc.
+  </li>
+	<li>
+		pelis de 1980 a 1995 de USA<br>
+		grep '198[0-9]\|199[0-5]' movies.txt | grep -i usa<br>
+		pelis italianas o japonesas de drama y/o romanticas (romance )<br>
+		grep 'Japan\|Italy' movies.txt| grep 'Drama\|Romance'
+	</li>
+	<li>
+<code><pre>
+	#!/bin/bash
+
+	#             $1           $2 $3  $4 $5
+	#./miSh.sh nombre_carpeta txt sh php js
+	nombreCarpeta=$1
+	#ls $nombreCarpeta/*.$2 | wc -l
+	if [ $# -gt 1 ]
+	then
+	  a=`ls $nombreCarpeta/*.$2 | wc -l`
+	  echo en la carpeta $1 hay $a ficheros de tipo $2
+	  if [ $# -gt 2 ]
+	    then
+	    a=`ls $nombreCarpeta/*.$3 | wc -l`
+	    echo en la carpeta $1 hay $a ficheros de tipo $3
+	    if [ $# -gt 3 ]
+	    then
+	      a=`ls $nombreCarpeta/*.$4 | wc -l`
+	      echo en la carpeta $1 hay $a ficheros de tipo $4
+	    fi
+	  fi
+	fi
+
+	#echo ls rm rmdir rm -rf ls -la wc wc -l
+	#cp mv cat grep cut for if -ge -gt -eq
+	#read a=3 $a `ls` touch man cd ~ cd -
+	#mkdir > >> ./ chmod clear | $1 $2 $#
+	#rutas absolutas y relativas
+
+
+	#echo `ls *.$1 | wc -l`
+</pre>
+</code>
+	</li>
+        <ol>
+    </li>
+    </ol>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>18 - headings, centered, etc.</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <h2 class="page-header">Tamaños de los headings, junto con un &lt;small&gt; a la derecha (este elemento tiene la clase <b>page-header</b>, le añade una linea gris debajo, para encabezados)</h2>
+            <h1>Soy un h1. <small>Soy un encabezado secundario, h1</small></h1>
+            <h2>Soy un h2. <small>Soy un encabezado secundario, h2</small></h2>
+            <h3>Soy un h3. <small>Soy un encabezado secundario, h3</small></h3>
+            <h4>Soy un h4. <small>Soy un encabezado secundario, h4</small></h4>
+            <h5>Soy un h5. <small>Soy un encabezado secundario, h5</small></h5>
+            <h6>Soy un. <small>Soy un encabezado secundario, h6</small></h6>
+        </section>
+
+        <section>
+            <h2 class="page-header">Uso de la clase lead</h2>
+            <p class="">Ejemplo sin la clase lead en un &lt;p>. Ejemplo sin la clase lead en un &lt;p>. Ejemplo sin la clase lead en un &lt;p>. Ejemplo sin la clase lead en un &lt;p>. Ejemplo sin la clase lead en un &lt;p>. Ejemplo sin la clase lead en un &lt;p>. Ejemplo sin la clase lead en un &lt;p>. </p>
+
+            <p class="lead">Ejemplo del uso de la clase lead en un &lt;p>. Ejemplo del uso de la clase lead en un &lt;p>. Ejemplo del uso de la clase lead en un &lt;p>. Ejemplo del uso de la clase lead en un &lt;p>. Ejemplo del uso de la clase lead en un &lt;p>. Ejemplo del uso de la clase lead en un &lt;p>. </p>
+        </section>
+
+        <section>
+            <h2 class="page-header">Uso de la clase lead</h2>
+            <small>Esto tiene la clase <b>small</b> </small>
+            <br>
+            <strong>Esto es la etiqueta <b>strong</b></strong>
+            <br>
+            <em>Esto tiene la etiqueta <b>em</b></em>
+            <br>
+        </section>
+
+        <section>
+            <h2 class="page-header">Centrar textos</h2>
+            <p class="lead text-left">Texto alineado a la izquierda, con el uso de su clase, text-left (añadida la clase lead)</p>
+            <p class="text-center">Texto centrado, con el uso de su clase, text-center.</p>
+            <p class="text-right">Texto alineado a la derecha, con el uso de su clase, text-right.</p>
+        </section>
+
+        <section>
+            <h2 class="page-header">Énfasis en los textos (añadida la clase 'lead' para aumentar el tamaño)</h2>
+            <p class="lead text-muted">Este contenido esta 'silenciado', class &rarr; text-muted</p>
+            <p class="lead text-primary">Esto es un elemento primario, class &rarr; text-primary</p>
+            <p class="lead text-success">Esto es un texto 'con exito', con la class &rarr; text-success</p>
+            <p class="lead text-info">Esto es un texto 'informativo', con la class &rarr; text-info</p>
+            <p class="lead text-warning">Esto es un texto con la clase &rarr; text-warning</p>
+            <p class="lead text-danger">Este texto tiene la clase &rarr; text-danger</p>
+        </section>
+
+        <section>
+            <h2 class="page-header">Uso de abreviaciones</h2>
+            <abbr title="World Wide Web">WWW</abbr> (se utiliza con la etiqueta &lt;abbr&gt;)
+            <br>
+            <abbr title="Real Simple Syndication" class="initialism">RSS</abbr> (para hacer la abreviación algo más pequeña le añadimos la clase 'initialism')
+        </section>
+
+        <section>
+            <h2 class="page-header">Direcciones, utilizando la etiqueta &lt;address&gt;</h2>
+            <address>
+                <strong>Solis, Inc.</strong><br>
+                Calle 707<br>Valencia, C.P. 46000<br>
+                <abbr title="Phone">Tel:</abbr> (+34) 666-666-666
+            </address>
+            <address>
+                <strong>Solis world</strong><br>
+                <a href="mailto:#">mailto@soliiiiis.com</a>
+            </address>
+        </section>
+
+        <section>
+            <h2 class="page-header">Blockquote</h2>
+            <blockquote>
+                Ejemplo de un blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </blockquote>
+            <blockquote>Unthinking respect for authority is the greatest enemy of trut.<small>Albert Einstein, 1900 <cite
+title="The best of atoms">The best of atoms</cite></small>
+            </blockquote>
+
+            <blockquote class="pull-right">Unthinking respect for authority... (alineado a la derecha)<small>Albert Einstein, 1900 <cite
+title="The best of atoms">The best of atoms</cite></small>
+            </blockquote>
+        </section>
+
+        <section>
+            <br>
+            <h2 class="page-header">Listas</h2>
+            <h4>Lista ordenada (ol &rarr; li)</h4>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ol>
+            <h4>Lista noordenada (ul &rarr; li)</h4>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <h4>Lista sin formato (ul &rarr; li, class list-unstyled)</h4>
+            <ul class="list-unstyled">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <h4>Listas inline (ul &rarr; li, class list-inline)</h4>
+            <ul class="list-inline">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <h4>Listas descriptivas (dl &rarr; dt &rarr; dd)
+             dt y dd)</h4>
+            <dl>
+                <dt>Descripcion 1</dt>
+                <dd>Item 1</dd>
+                <dt>Descripcion 2</dt>
+                <dd>Item 2</dd>
+            </dl>
+            <h4>Listas descriptivas horizontales (dl &rarr; dt &rarr; dd, class dl-horizontal)</h4>
+            <dl class="dl-horizontal">
+                <dt>Descripcion 1</dt>
+                <dd>Item 1</dd>
+                <dt>Descripcion 2</dt>
+                <dd>Item 2</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2 class="page-header">Code y pre</h2>
+            <p><code>&lt;header&gt;</code> &larr; esto esta dentro de un &lt;code></p>
+            <p>Para mostrarlo como un bloque se utiliza con el &lt;pre>, y se respentan todos los espacios, tabuladores y retornos de carro:
+                <pre>
+&lt;article&gt;
+    &lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;/article&gt;
+</pre>
+
+        </section>
+    </div>
+    <script src="js/view_source.min.js"></script>
+
+</body>
+
+</html>
