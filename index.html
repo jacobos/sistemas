@@ -51,7 +51,7 @@
     }
 
     .jumbotron {
-      background: #e6e7ff;
+      background: #333;
     }
 
     .btn {
@@ -95,11 +95,12 @@
   <div class="header"></div>
   <div class="container jumbotron" ng-controller="siClassController as elementInClass" ng-cloak>
     <div class="col-md-4 col-xs-12" ng-repeat="element in elements">
-        <div class="panel panel-info">
+        <div class="panel">
+        <a href="{{element.url}}" target="_blank">
           <div class="panel-heading parent">
-
-        <span class="{{element.lasti}} {{element.seen}}" ng-show="element.url" title="{{element.desc}}" class="btn btn-block elem"><a href="{{element.url}}" target="_blank">{{element.name}}</a>&nbsp;&nbsp;<a ng-show="element.w3" href="{{element.w3}}" target="_blank" style="color: black">W3</a>&nbsp;<a ng-show="element.url2" href="{{element.url2}}" target="_blank" style="color: black">EX</a> <a ng-show="element.url3" href="{{element.url3}}" target="_blank" style="color: black">EX2</a></span>
-    </div>
+            <span class="{{element.lasti}} {{element.seen}}" ng-show="element.url" title="{{element.desc}}" class="btn btn-block elem">{{element.name}}</span>
+          </div>
+        </a>
   </div>
   </div>
   </div>
